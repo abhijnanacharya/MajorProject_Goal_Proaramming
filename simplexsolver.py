@@ -1,22 +1,4 @@
-"""
-Read-me:
-Call functions in this order:
-    problem = gen_matrix(v,c)
-    constrain(problem, string)
-    obj(problem, string)
-    maxz(problem)
-gen_matrix() produces a matrix to be given constraints and an objective function to maximize or minimize.
-    It takes var (variable number) and cons (constraint number) as parameters.
-    gen_matrix(2,3) will create a 4x7 matrix by design.
-constrain() constrains the problem. It takes the problem as the first argument and a string as the second. The string should be
-    entered in the form of 1,2,G,10 meaning 1(x1) + 2(x2) >= 10.
-    Use 'L' for <= instead of 'G'
-Use obj() only after entering all constraints, in the form of 1,2,0 meaning 1(x1) +2(x2) +0
-    The final term is always reserved for a constant and 0 cannot be omitted.
-Use maxz() to solve a maximization LP problem. Use minz() to solve a minimization problem.
-Disclosure -- pivot() function, subcomponent of maxz() and minz(), has a couple bugs. So far, these have only occurred when
-    minz() has been called.
-"""
+
 
 import numpy as np
 
